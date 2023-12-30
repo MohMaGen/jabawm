@@ -1,0 +1,28 @@
+[package]
+name = "jabawm"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = { version = "1.0.77", features = ["backtrace"] }
+
+[dependencies.smithay]
+git = "https://github.com/Smithay/smithay.git"
+# path = "../smithay"
+default-features = false
+features = [
+    "backend_drm",
+    "backend_egl",
+    "backend_gbm",
+    "backend_libinput",
+    "backend_session_libseat",
+    "backend_udev",
+    "backend_winit",
+    "desktop",
+    "renderer_gl",
+    "renderer_multi",
+    "use_system_lib",
+    "wayland_frontend",
+]
